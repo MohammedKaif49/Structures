@@ -1,0 +1,36 @@
+# Structures
+//write a C program that defines a structure employee containing the details such as empno , empname, department name and salary.
+//#include<stdio.h>
+void main()
+{
+	struct employee 
+	{
+		char name[30];
+		int age;
+		char phone_no[30];
+		int salary;
+	}emp[20];
+	int i , n;
+	printf("Enter number of employees : ");
+	scanf("%d",&n);
+	printf("\nEnter employee details :");
+	for(i=0;i<n;i++)
+	{
+		printf("\nEnter the name of employee number %d :",i);
+		scanf("%s",emp[i].name);
+		printf("\nEnter the age of the employee :");
+		scanf("%d",&emp[i].age);
+		printf("\nEnter the phone number of the employee :");
+		scanf("%s",emp[i].phone_no);
+		printf("\nEnter the salary of the employee :");
+		scanf("%d",&emp[i].salary);
+	}
+	printf("\n\nDisplaying Employee details :");
+	for(i =0 ; i<n;i++)
+	{
+		printf("\nName of employee %d : %s",i ,emp[i].name);
+		printf("\nAge of employee %d : %d",i ,emp[i].age);
+		printf("\nPhone number of employee %d : %s",i ,emp[i].phone_no);
+		printf("\nSalary of employee %d : %d",i ,emp[i].salary);
+	}
+}
